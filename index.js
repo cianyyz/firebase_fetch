@@ -1,7 +1,8 @@
 const process = require('process');
 const getData = require('./firebase_fetch')
 const buildReadMe = require('./buildreadme')
-const commitReadme = require('./commitreadme')
+const commitReadme = require('./commitreadme');
+const core = require('@actions/core')
 
 getData().then((value) => {
 
