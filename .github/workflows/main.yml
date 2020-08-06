@@ -1,4 +1,4 @@
-name: Latest firebase markdown update 2
+name: Latest firebase markdown update
 on:
   schedule:
     # Runs every hour
@@ -10,13 +10,12 @@ jobs:
     name: Update a markdown file with a firebase database value
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        uses: ./
+      - uses: actions/checkout@v2
+      - uses: ./
         with:
           credentials: ${{ secrets.FIREBASE_CREDENTIALS }}
           databaseUrl: https://account-harvester.firebaseio.com
-          databseType: firestore
+          databaseType: firestore
           path: email_accounts
           doc: --stats
           keyvalue: num_proton
