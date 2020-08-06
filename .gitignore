@@ -1,0 +1,6 @@
+node_modules/*
+test/*.js
+test/*.json
+test/*.md
+.cache/*
+.env

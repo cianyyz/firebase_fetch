@@ -1,0 +1,31 @@
+{
+  "name": "firebase-markdown",
+  "version": "1.0.0",
+  "description": "Fetch data from either firebase database and update markdown in your github project with it!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "ncc build"
+  },
+  "author": "cianyyz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cianyyz/firebase_fetch"
+  },
+  "license": "MIT",
+  "keywords": [
+    "github",
+    "workflow",
+    "firestore",
+    "firebase"
+  ],
+  "bugs": {
+    "url": "https://github.com/cianyyz/firebase_fetch/issues"
+  },
+  "homepage": "https://github.com/cianyyz/firebase_fetch/blob/master/README.md",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "firebase-admin": "^9.0.0",
+    "process": "latest"
+  }
+}

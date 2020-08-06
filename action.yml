@@ -1,0 +1,52 @@
+name: Firebase Markdown Update
+description: Fetches a value from a firebase realtime database or firestore and updates a given markdown with it
+author: cianyyz
+inputs:
+  gh_token:
+    description: 'GitHub access token with Repo scope'
+    required: false
+    default: ${{ github.token }}
+  commit_message:
+    description: "Commit message used while committing to the repo"
+    default: "Updated markdown with a firebase value"
+    required: false
+  committer_username:
+    description: "Username used while committing to the repo"
+    default: "cianyyz"
+    required: false
+  committer_email:
+    description: "Email id used while committing to the repo"
+    default: "25750319+cianyyz@users.noreply.github.com"
+    required: false
+  comment_tag_name:
+    description: Allows you to override the default comment tag name (<!-- FIREBASE_VALUE:START --><!-- FIREBASE_VALUE:END -->)
+    default: FIREBASE_VALUE
+    required: false
+  readme_path:
+    description: Path of the markdown you wish to edit
+    default: README.md
+    required: false
+  credentials:
+    description: Service Account Credentials json for connecting to application
+    required: true
+  databaseUrl:
+    description: URL to the database you want to connect to
+    required: true
+  databaseType:
+    description: Either `realtime` or `firestore`
+    required: true
+  path:
+    description: Path to what you want to set in your database ( or collection name in case of firestore)
+    required: true
+  doc:
+    description: Document name
+    required: true
+  keyvalue:
+    description: Field name of the value you wish to recover
+    required: true
+branding:
+  icon: 'activity'
+  color: 'orange'
+runs:
+  using: node12
+  main: ENTERHERE
