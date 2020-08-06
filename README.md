@@ -3,7 +3,7 @@
 
 Gets some data from firebase, edits your markdown and commits with an easy GitHub Action :)
 
-#Examples
+# Examples
 
-Number of protonmaila ccounts I've generated: <!-- FIREBASE_VALUE:START --><!-- FIREBASE_VALUE:END -->
+Number of protonmail accounts I've generated: <!-- FIREBASE_VALUE:START --><!-- FIREBASE_VALUE:END -->
 
