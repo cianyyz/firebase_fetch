@@ -103,6 +103,7 @@ const commitReadme = async () => {
     await exec('git', ['commit', '-m', '' + commitMessage + '']);
     await exec('git', ['push']);
     core.info("Readme updated successfully in the upstream repository");
+    process.exit(0);
 };
 
 const buildReadMe = (previousContent, newContent) => {
@@ -148,7 +149,6 @@ getData().then((value) => {
         if (!process.env.TEST_MODE) {
             try {
                 commitReadme();
-                process.exit(0);
             } catch (e) {
                 core.setFailed(`Error commiting ${e}`)
                 process.exit(-1);
