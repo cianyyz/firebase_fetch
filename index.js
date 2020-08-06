@@ -2,6 +2,7 @@ const process = require('process');
 var core = require('@actions/core')
 var admin = require('firebase-admin')
 const { spawn } = require('child_process');
+const fs = require('fs');
 
 const isRequired = {
     required: true,
