@@ -100,7 +100,7 @@ const commitReadme = async () => {
         `https://${GITHUB_TOKEN}@github.com/${process.env.GITHUB_REPOSITORY}.git`]);
     await exec('git', ['config', '--global', 'user.name', committerUsername]);
     await exec('git', ['add', README_FILE_PATH]);
-    await exec('git', ['commit', '-m', commitMessage]);
+    await exec('git', ['commit', '-m', '' + commitMessage + '']);
     await exec('git', ['push']);
     core.info("Readme updated successfully in the upstream repository");
     jobFailFlag = False;
