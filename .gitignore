@@ -4,3 +4,5 @@ test/*.json
 test/*.md
 .cache/*
 .env
+test.js
+test.*
