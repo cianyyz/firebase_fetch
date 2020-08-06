@@ -49,4 +49,4 @@ branding:
   color: 'orange'
 runs:
   using: node12
-  main: ENTERHERE
+  main: dist/index.js
