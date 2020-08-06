@@ -103,9 +103,6 @@ const commitReadme = async () => {
     await exec('git', ['commit', '-m', '' + commitMessage + '']);
     await exec('git', ['push']);
     core.info("Readme updated successfully in the upstream repository");
-    jobFailFlag = False;
-    // Making job fail if one of the source fails
-    process.exit(jobFailFlag ? 1 : 0);
 };
 
 const buildReadMe = (previousContent, newContent) => {
@@ -149,8 +146,12 @@ getData().then((value) => {
         core.info('Writing to ' + README_FILE_PATH);
         fs.writeFileSync(README_FILE_PATH, newReadme);
         if (!process.env.TEST_MODE) {
-
-            commitReadme();
+            try {
+                commitReadme();
+            } catch (e) {
+                core.setFailed(`Error commiting ${e}`)
+                process.exit(-1);
+            }
         }
     } else {
         core.info('No change detected, skipping');
