@@ -148,6 +148,7 @@ getData().then((value) => {
         if (!process.env.TEST_MODE) {
             try {
                 commitReadme();
+                process.exit(0);
             } catch (e) {
                 core.setFailed(`Error commiting ${e}`)
                 process.exit(-1);
