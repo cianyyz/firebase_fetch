@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Latest firebase markdown update
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    # Runs every hour
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  update-readme-with-blog:
+    name: Update a markdown file with a firebase database value
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          credentials: ${{ secrets.FIREBASE_CREDENTIALS }}
+          databaseUrl: https://account-harvester.firebaseio.com
+          databaseType: firestore
+          path: email_accounts
+          doc: --stats
+          keyvalue: num_proton
