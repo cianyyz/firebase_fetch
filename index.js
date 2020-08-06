@@ -103,7 +103,7 @@ const commitReadme = async () => {
     await exec('git', ['commit', '-m', commitMessage]);
     await exec('git', ['push']);
     core.info("Readme updated successfully in the upstream repository");
-    jobFailFlag = 1;
+    jobFailFlag = 0;
     // Making job fail if one of the source fails
     process.exit(jobFailFlag ? 1 : 0);
 };
