@@ -5,5 +5,5 @@ Gets some data from firebase, edits your markdown and commits with an easy GitHu
 
 ### Examples
 
-Number of protonmail accounts I've generated: <!-- FIREBASE_VALUE:START --><!-- FIREBASE_VALUE:END -->
+Number of orders I have: <!-- FIREBASE_VALUE:START --><!-- FIREBASE_VALUE:END -->
 
