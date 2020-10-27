@@ -5,5 +5,5 @@ Retrieves a value from firestore and edits your markdown with that value, then c
 
 ### Examples
 
-- Number of orders I have: <!-- FIREBASE_VALUE:START --><!-- FIREBASE_VALUE:END -->
+- Number of orders I have: <!-- FIREBASE_VALUE:START -->10<!-- FIREBASE_VALUE:END -->
 
