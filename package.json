@@ -1,6 +1,6 @@
 {
   "name": "firebase-markdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fetch data from either firebase database and update markdown in your github project with it!",
   "main": "index.js",
   "scripts": {
@@ -24,8 +24,9 @@
   },
   "homepage": "https://github.com/cianyyz/firebase_fetch/blob/master/README.md",
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": ">=1.2.6",
     "firebase-admin": "^9.0.0",
+    "node-forge": ">=0.10.0",
     "process": "latest"
   }
 }
